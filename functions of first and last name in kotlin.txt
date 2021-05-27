@@ -1,0 +1,12 @@
+   fun getFirstName(name: String): String? {
+        val index = if (name.indexOf(" ") > 0) name.indexOf(" ") else name.length
+        return capSentences(name.substring(0, index))
+    }
+
+
+ fun getLastName(name: String): String? {
+        val index = if (name.indexOf(" ") > 0) name.indexOf(" ") else name.length
+        return if (index >= name.length) {
+            ""
+        } else capSentences(name.substring(index))
+    }
